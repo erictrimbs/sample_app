@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'byebug'
 
 group :development, :test do
   gem 'solargraph'

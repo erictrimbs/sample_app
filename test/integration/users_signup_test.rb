@@ -9,7 +9,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       password_confirmation: "bar" }
   end
 
-
   test "invalid signup information" do
     get signup_path
     assert_no_difference 'User.count' do
@@ -43,6 +42,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert !!flash[:success]
     follow_redirect!
     assert_template 'users/show'
+    assert is_logged_in?
   end
 
 end
